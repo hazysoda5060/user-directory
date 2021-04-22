@@ -290,16 +290,13 @@ function Data(props) {
   ];
 
   return (
-    <div>
-      {
-        <div>
-          <h1>Name: {Data[props.index]['name']['first']} {Data[props.index]['name']['last']}</h1>
-          <h3>From: {Data[props.index]['city']}, {Data[props.index]['country']}</h3>
-          <h3>Employer: {Data[props.index]['employer']}</h3>
-          <h3>Favorite Movies: {Data[props.index]['favoriteMovies'].map((movie) => <ol><li>{movie}</li></ol>)}</h3>
-        </div>
-      }
-    </div>
+      <div>
+        <h1>{Data[props.index]['id']}/25</h1>
+        <h1><u>{Data[props.index].name.first} {Data[props.index].name.last}</u></h1>
+        <h3>From: {Data[props.index].city}, {Data[props.index].country}</h3>
+        <h3>Employer: {Data[props.index].employer}</h3>
+        <h3>Favorite Movies: {Data[props.index].favoriteMovies.map((movie) => <ol><li>{movie}</li></ol>)}</h3>
+      </div>
   )
 
 }

@@ -6,23 +6,25 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      cIndex: 0
+      index: 0
     }
+    this.increaseHandler = this.increaseHandler.bind(this)
+    this.decreaseHandler = this.decreaseHandler.bind(this)
   }
 
   increaseHandler() {
-    if(this.state.cIndex === 24){
-      this.setState({cIndex: 0})
+    if(this.state.index === 24){
+      this.setState({index: 0})
     } else {
-      this.setState({cIndex: this.state.cIndex + 1})
+      this.setState({index: this.state.index + 1})
     }
   }
 
   decreaseHandler() {
-    if(this.state.cIndex === 0){
-      this.setState({cIndex: 24})
+    if(this.state.index === 0){
+      this.setState({index: 24})
     } else {
-      this.setState({cIndex: this.state.cIndex - 1})
+      this.setState({index: this.state.index - 1})
     }
   }
   
@@ -30,8 +32,8 @@ class App extends Component {
     return (
       <div className="App">
         <h2 className='header'>Home</h2>
-        <div className='user-card'>
-          <Data index={this.state.cIndex}/>
+        <div>
+          <Data index={this.state.index} className='user-card'/>
         </div>
         <button onClick={this.decreaseHandler}>{'<'} Previous</button>
         <button onClick={this.increaseHandler}>Next {'>'}</button>

@@ -1,6 +1,10 @@
 * {
-  background-color: rgb(46, 46, 46);
   margin: 0;
+}
+
+.App {
+  background-color: rgb(46, 46, 46);
+  height: 100%;
 }
 
 .header {
@@ -8,3 +12,6 @@
   padding: 20px;
 }
 
+.user-card {
+  background-color: white;
+}
