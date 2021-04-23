@@ -25,7 +25,7 @@ function Data(props) {
       favoriteMovies: [
         "Camp",
         "Her Highness and the Bellboy",
-        "Mona and the Time of Burning Love (Mona ja palavan rakkauden aika))"
+        "Mona and the Time of Burning Love (Mona ja palavan rakkauden aika)"
       ]
     },
     {
@@ -290,12 +290,15 @@ function Data(props) {
   ];
 
   return (
-      <div>
-        <h1>{Data[props.index]['id']}/25</h1>
-        <h1><u>{Data[props.index].name.first} {Data[props.index].name.last}</u></h1>
-        <h3>From: {Data[props.index].city}, {Data[props.index].country}</h3>
-        <h3>Employer: {Data[props.index].employer}</h3>
-        <h3>Favorite Movies: {Data[props.index].favoriteMovies.map((movie) => <ol><li>{movie}</li></ol>)}</h3>
+      <div className='user-card'>
+        <h1 className='current-card'>{Data[props.index].id}/25</h1>
+        <h1><u className='name'>{Data[props.index].name.first} {Data[props.index].name.last}</u></h1>
+        <div className='general-info'>
+          <p><b>From: </b>{Data[props.index].city}, {Data[props.index].country}</p>
+          <p><b>Job Title: </b>{Data[props.index].title}</p>
+          <p><b>Employer: </b>{Data[props.index].employer}</p>
+        </div>
+        <p><b>Favorite Movies: </b>{Data[props.index].favoriteMovies.map((movie) => <ol><li>{movie}</li></ol>)}</p>
       </div>
   )
 

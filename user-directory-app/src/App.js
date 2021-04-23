@@ -33,10 +33,12 @@ class App extends Component {
       <div className="App">
         <h2 className='header'>Home</h2>
         <div>
-          <Data index={this.state.index} className='user-card'/>
+          <Data index={this.state.index}/>
         </div>
-        <button onClick={this.decreaseHandler}>{'<'} Previous</button>
-        <button onClick={this.increaseHandler}>Next {'>'}</button>
+        <div className='btn'>
+          <button onClick={this.decreaseHandler}><h3>{'<'} Previous</h3></button>
+          <button onClick={this.increaseHandler}><h3>Next {'>'}</h3></button>
+        </div>
       </div>
     );
   }
