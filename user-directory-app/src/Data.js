@@ -298,7 +298,8 @@ function Data(props) {
           <p><b>Job Title: </b>{Data[props.index].title}</p>
           <p><b>Employer: </b>{Data[props.index].employer}</p>
         </div>
-        <p><b>Favorite Movies: </b>{Data[props.index].favoriteMovies.map((movie) => <ol><li>{movie}</li></ol>)}</p>
+        <p><b>Favorite Movies:</b></p>
+        <ol>{Data[props.index].favoriteMovies.map((movie) => <li>{movie}</li>)}</ol>
       </div>
   )
 
